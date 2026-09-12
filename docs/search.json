@@ -2,15 +2,36 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "MDS Milestone 2",
+    "title": "Nanxuan Li",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Hi, I’m Nanxuan Li. I am from Toronto and completed my undergraduate studies in Statistics and Economics at the University of Toronto. Before joining the MDS program, I developed an interest in using data to understand and solve real-world problems. Through the MDS program, I hope to improve my data analysis and programming skills."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "I completed my undergraduate studies at the University of Toronto, where I majored in Statistics and Economics. My studies gave me experience working with data and helped me develop an interest in applying statistical methods to real-world problems."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "I completed my undergraduate studies at the University of Toronto, where I majored in Statistics and Economics. My studies gave me experience working with data and helped me develop an interest in applying statistical methods to real-world problems."
+  },
+  {
+    "objectID": "about.html#why-data-science",
+    "href": "about.html#why-data-science",
+    "title": "About",
+    "section": "Why Data Science",
+    "text": "Why Data Science\nI chose to study data science because I want to strengthen my programming and analytical skills. During the MDS program, I hope to gain more experience with tools such as Python, R, SQL, and data visualization, and learn how to use them effectively in practical projects."
+  },
+  {
+    "objectID": "about.html#outside-data-science",
+    "href": "about.html#outside-data-science",
+    "title": "About",
+    "section": "Outside Data Science",
+    "text": "Outside Data Science\nOutside of data science, I enjoy skiing and sport shooting. I especially enjoy skiing during the winter and spending time outdoors. I also like exploring new technology and learning new skills in my free time."
   }
 ]

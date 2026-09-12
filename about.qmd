@@ -2,4 +2,14 @@
 title: "About"
 ---
 
-About this site
+## Background
+
+I completed my undergraduate studies at the University of Toronto, where I majored in Statistics and Economics. My studies gave me experience working with data and helped me develop an interest in applying statistical methods to real-world problems.
+
+## Why Data Science
+
+I chose to study data science because I want to strengthen my programming and analytical skills. During the MDS program, I hope to gain more experience with tools such as Python, R, SQL, and data visualization, and learn how to use them effectively in practical projects.
+
+## Outside Data Science
+
+Outside of data science, I enjoy skiing and sport shooting. I especially enjoy skiing during the winter and spending time outdoors. I also like exploring new technology and learning new skills in my free time.
