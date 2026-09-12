@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nanxuan Li",
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My First Weeks in MDS",
     "section": "",
-    "text": "Hi, I’m Nanxuan Li. I am from Toronto and completed my undergraduate studies in Statistics and Economics at the University of Toronto. Before joining the MDS program, I developed an interest in using data to understand and solve real-world problems. Through the MDS program, I hope to improve my data analysis and programming skills."
+    "text": "My first few weeks in the MDS program have been both exciting and challenging. I have been learning several tools and programming languages, including R, Python, and Git Bash. Some of these tools were new to me, so it took some time to get familiar with them. However, I am gradually becoming more comfortable using them.\nOne of the biggest challenges for me has been learning how different tools work together. For example, I have been using Git Bash to manage files and GitHub repositories, while also using R and Python for data analysis. Since I did not have any previous experience with Python, learning it has been especially challenging for me. Although I sometimes encounter errors, solving these problems has helped me better understand how these tools work.\nEven though the first few weeks have been challenging, I am enjoying the learning process. As I continue through the MDS program, I hope to become more confident with Python and improve my overall programming and data analysis skills. I am looking forward to applying what I learn to more practical data science projects.\n\n\n\nMy first weeks in the MDS program"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "My First Weeks in MDS\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nNanxuan Li\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -33,5 +40,12 @@
     "title": "About",
     "section": "Outside Data Science",
     "text": "Outside Data Science\nOutside of data science, I enjoy skiing and sport shooting. I especially enjoy skiing during the winter and spending time outdoors. I also like exploring new technology and learning new skills in my free time."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nanxuan Li",
+    "section": "",
+    "text": "Hi, I’m Nanxuan Li. I am from Toronto and completed my undergraduate studies in Statistics and Economics at the University of Toronto. Before joining the MDS program, I developed an interest in using data to understand and solve real-world problems. Through the MDS program, I hope to improve my data analysis and programming skills."
   }
 ]

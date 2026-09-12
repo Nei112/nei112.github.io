@@ -1,0 +1,13 @@
+---
+title: "My First Weeks in MDS"
+author: "Nanxuan Li"
+date: "2026-09-11"
+---
+
+My first few weeks in the MDS program have been both exciting and challenging. I have been learning several tools and programming languages, including R, Python, and Git Bash. Some of these tools were new to me, so it took some time to get familiar with them. However, I am gradually becoming more comfortable using them.
+
+One of the biggest challenges for me has been learning how different tools work together. For example, I have been using Git Bash to manage files and GitHub repositories, while also using R and Python for data analysis. Since I did not have any previous experience with Python, learning it has been especially challenging for me. Although I sometimes encounter errors, solving these problems has helped me better understand how these tools work.
+
+Even though the first few weeks have been challenging, I am enjoying the learning process. As I continue through the MDS program, I hope to become more confident with Python and improve my overall programming and data analysis skills. I am looking forward to applying what I learn to more practical data science projects.
+
+![My first weeks in the MDS program](../../images/First_Week.jpg)
