@@ -35,6 +35,16 @@ Data source: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), 
 
 
 
+## Number of Penguins
+
+I will count how many penguins belong to each species.
+
+```{python}
+penguins["species"].value_counts()
+```
+
+
+
 ## Comparing Species
 
 I will calculate the average body mass for each penguin species.

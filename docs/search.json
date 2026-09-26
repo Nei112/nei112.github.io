@@ -131,5 +131,19 @@
     "title": "Exploring the Palmer Penguins Dataset with R",
     "section": "Conclusion",
     "text": "Conclusion\nThe results show that Gentoo penguins have the highest average body mass among the three species. This analysis demonstrates how R can be used to summarize and visualize data."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#number-of-penguins",
+    "href": "posts/r-analysis/index.html#number-of-penguins",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Number of Penguins",
+    "text": "Number of Penguins\nI will count how many penguins belong to each species.\n\ntable(penguins$species)\n\n\n   Adelie Chinstrap    Gentoo \n      152        68       124"
+  },
+  {
+    "objectID": "posts/python-analysis/index.html#number-of-penguins",
+    "href": "posts/python-analysis/index.html#number-of-penguins",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "Number of Penguins",
+    "text": "Number of Penguins\nI will count how many penguins belong to each species.\n\npenguins[\"species\"].value_counts()\n\nspecies\nAdelie       152\nGentoo       124\nChinstrap     68\nName: count, dtype: int64"
   }
 ]
