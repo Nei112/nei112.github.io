@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "posts/r-analysis/index.html",
+    "href": "posts/r-analysis/index.html",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "",
+    "text": "In this post, I will explore the Palmer Penguins dataset using R. I will compare the average body mass of different penguin species and create a simple bar chart.\nMy goal is to learn how to summarize and visualize data using R."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#introduction",
+    "href": "posts/r-analysis/index.html#introduction",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "",
+    "text": "In this post, I will explore the Palmer Penguins dataset using R. I will compare the average body mass of different penguin species and create a simple bar chart.\nMy goal is to learn how to summarize and visualize data using R."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#loading-the-data",
+    "href": "posts/r-analysis/index.html#loading-the-data",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Loading the Data",
+    "text": "Loading the Data\nFirst, I will load the dataset and display the first six rows.\n\nlibrary(palmerpenguins)\n\nhead(penguins)\n\n  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n1  Adelie Torgersen           39.1          18.7               181        3750\n2  Adelie Torgersen           39.5          17.4               186        3800\n3  Adelie Torgersen           40.3          18.0               195        3250\n4  Adelie Torgersen             NA            NA                NA          NA\n5  Adelie Torgersen           36.7          19.3               193        3450\n6  Adelie Torgersen           39.3          20.6               190        3650\n     sex year\n1   male 2007\n2 female 2007\n3 female 2007\n4   &lt;NA&gt; 2007\n5 female 2007\n6   male 2007\n\n\nData source: Palmer Penguins, Palmer Station Antarctica LTER."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#number-of-penguins",
+    "href": "posts/r-analysis/index.html#number-of-penguins",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Number of Penguins",
+    "text": "Number of Penguins\nI will count how many penguins belong to each species.\n\ntable(penguins$species)\n\n\n   Adelie Chinstrap    Gentoo \n      152        68       124"
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#comparing-species",
+    "href": "posts/r-analysis/index.html#comparing-species",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Comparing Species",
+    "text": "Comparing Species\nNext, I will calculate the average body mass for each species.\n\naverage_mass &lt;- aggregate(\n  body_mass_g ~ species,\n  data = penguins,\n  FUN = mean\n)\n\naverage_mass\n\n    species body_mass_g\n1    Adelie    3700.662\n2 Chinstrap    3733.088\n3    Gentoo    5076.016"
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#visualization",
+    "href": "posts/r-analysis/index.html#visualization",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Visualization",
+    "text": "Visualization\nI will create a bar chart to compare the average body mass of the three penguin species.\n\nbarplot(\n  average_mass$body_mass_g,\n  names.arg = average_mass$species,\n  ylab = \"Average Body Mass (g)\",\n  xlab = \"Species\"\n)\n\n\n\n\n\n\n\nFigure 1: Average body mass by penguin species."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#conclusion",
+    "href": "posts/r-analysis/index.html#conclusion",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe results show that Gentoo penguins have the highest average body mass among the three species. This analysis demonstrates how R can be used to summarize and visualize data."
+  },
+  {
     "objectID": "posts/first-weeks/index.html",
     "href": "posts/first-weeks/index.html",
     "title": "My First Weeks in MDS",
@@ -11,7 +60,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "My First Weeks in MDS\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nNanxuan Li\n\n\n\n\n\nNo matching items"
+    "text": "Exploring the Palmer Penguins Dataset with Python\n\n\n\n\n\n\n\n\nSep 26, 2026\n\n\nNanxuan Li\n\n\n\n\n\n\n\n\n\n\n\n\nExploring the Palmer Penguins Dataset with R\n\n\n\n\n\n\n\n\nSep 26, 2026\n\n\nNanxuan Li\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Weeks in MDS\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nNanxuan Li\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -70,6 +119,13 @@
     "text": "Loading the Data\nI will first load the Palmer Penguins dataset and look at the first five rows.\n\nfrom palmerpenguins import load_penguins\nimport matplotlib.pyplot as plt\n\npenguins = load_penguins()\npenguins.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n\n\n\n\n\n\n\nData source: Palmer Penguins, Palmer Station Antarctica LTER."
   },
   {
+    "objectID": "posts/python-analysis/index.html#number-of-penguins",
+    "href": "posts/python-analysis/index.html#number-of-penguins",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "Number of Penguins",
+    "text": "Number of Penguins\nI will count how many penguins belong to each species.\n\npenguins[\"species\"].value_counts()\n\nspecies\nAdelie       152\nGentoo       124\nChinstrap     68\nName: count, dtype: int64"
+  },
+  {
     "objectID": "posts/python-analysis/index.html#comparing-species",
     "href": "posts/python-analysis/index.html#comparing-species",
     "title": "Exploring the Palmer Penguins Dataset with Python",
@@ -89,61 +145,5 @@
     "title": "Exploring the Palmer Penguins Dataset with Python",
     "section": "Conclusion",
     "text": "Conclusion\nThe chart shows that Gentoo penguins have the highest average body mass among the three species. This simple analysis demonstrates how Python can be used to summarize and visualize data."
-  },
-  {
-    "objectID": "posts/r-analysis/index.html",
-    "href": "posts/r-analysis/index.html",
-    "title": "Exploring the Palmer Penguins Dataset with R",
-    "section": "",
-    "text": "In this post, I will explore the Palmer Penguins dataset using R. I will compare the average body mass of different penguin species and create a simple bar chart.\nMy goal is to learn how to summarize and visualize data using R."
-  },
-  {
-    "objectID": "posts/r-analysis/index.html#introduction",
-    "href": "posts/r-analysis/index.html#introduction",
-    "title": "Exploring the Palmer Penguins Dataset with R",
-    "section": "",
-    "text": "In this post, I will explore the Palmer Penguins dataset using R. I will compare the average body mass of different penguin species and create a simple bar chart.\nMy goal is to learn how to summarize and visualize data using R."
-  },
-  {
-    "objectID": "posts/r-analysis/index.html#loading-the-data",
-    "href": "posts/r-analysis/index.html#loading-the-data",
-    "title": "Exploring the Palmer Penguins Dataset with R",
-    "section": "Loading the Data",
-    "text": "Loading the Data\nFirst, I will load the dataset and display the first six rows.\n\nlibrary(palmerpenguins)\n\nhead(penguins)\n\n  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n1  Adelie Torgersen           39.1          18.7               181        3750\n2  Adelie Torgersen           39.5          17.4               186        3800\n3  Adelie Torgersen           40.3          18.0               195        3250\n4  Adelie Torgersen             NA            NA                NA          NA\n5  Adelie Torgersen           36.7          19.3               193        3450\n6  Adelie Torgersen           39.3          20.6               190        3650\n     sex year\n1   male 2007\n2 female 2007\n3 female 2007\n4   &lt;NA&gt; 2007\n5 female 2007\n6   male 2007\n\n\nData source: Palmer Penguins, Palmer Station Antarctica LTER."
-  },
-  {
-    "objectID": "posts/r-analysis/index.html#comparing-species",
-    "href": "posts/r-analysis/index.html#comparing-species",
-    "title": "Exploring the Palmer Penguins Dataset with R",
-    "section": "Comparing Species",
-    "text": "Comparing Species\nNext, I will calculate the average body mass for each species.\n\naverage_mass &lt;- aggregate(\n  body_mass_g ~ species,\n  data = penguins,\n  FUN = mean\n)\n\naverage_mass\n\n    species body_mass_g\n1    Adelie    3700.662\n2 Chinstrap    3733.088\n3    Gentoo    5076.016"
-  },
-  {
-    "objectID": "posts/r-analysis/index.html#visualization",
-    "href": "posts/r-analysis/index.html#visualization",
-    "title": "Exploring the Palmer Penguins Dataset with R",
-    "section": "Visualization",
-    "text": "Visualization\nI will create a bar chart to compare the average body mass of the three penguin species.\n\nbarplot(\n  average_mass$body_mass_g,\n  names.arg = average_mass$species,\n  ylab = \"Average Body Mass (g)\",\n  xlab = \"Species\"\n)\n\n\n\n\n\n\n\nFigure 1: Average body mass by penguin species."
-  },
-  {
-    "objectID": "posts/r-analysis/index.html#conclusion",
-    "href": "posts/r-analysis/index.html#conclusion",
-    "title": "Exploring the Palmer Penguins Dataset with R",
-    "section": "Conclusion",
-    "text": "Conclusion\nThe results show that Gentoo penguins have the highest average body mass among the three species. This analysis demonstrates how R can be used to summarize and visualize data."
-  },
-  {
-    "objectID": "posts/r-analysis/index.html#number-of-penguins",
-    "href": "posts/r-analysis/index.html#number-of-penguins",
-    "title": "Exploring the Palmer Penguins Dataset with R",
-    "section": "Number of Penguins",
-    "text": "Number of Penguins\nI will count how many penguins belong to each species.\n\ntable(penguins$species)\n\n\n   Adelie Chinstrap    Gentoo \n      152        68       124"
-  },
-  {
-    "objectID": "posts/python-analysis/index.html#number-of-penguins",
-    "href": "posts/python-analysis/index.html#number-of-penguins",
-    "title": "Exploring the Palmer Penguins Dataset with Python",
-    "section": "Number of Penguins",
-    "text": "Number of Penguins\nI will count how many penguins belong to each species.\n\npenguins[\"species\"].value_counts()\n\nspecies\nAdelie       152\nGentoo       124\nChinstrap     68\nName: count, dtype: int64"
   }
 ]
