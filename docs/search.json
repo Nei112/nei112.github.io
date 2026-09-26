@@ -89,5 +89,47 @@
     "title": "Exploring the Palmer Penguins Dataset with Python",
     "section": "Conclusion",
     "text": "Conclusion\nThe chart shows that Gentoo penguins have the highest average body mass among the three species. This simple analysis demonstrates how Python can be used to summarize and visualize data."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html",
+    "href": "posts/r-analysis/index.html",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "",
+    "text": "In this post, I will explore the Palmer Penguins dataset using R. I will compare the average body mass of different penguin species and create a simple bar chart.\nMy goal is to learn how to summarize and visualize data using R."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#introduction",
+    "href": "posts/r-analysis/index.html#introduction",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "",
+    "text": "In this post, I will explore the Palmer Penguins dataset using R. I will compare the average body mass of different penguin species and create a simple bar chart.\nMy goal is to learn how to summarize and visualize data using R."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#loading-the-data",
+    "href": "posts/r-analysis/index.html#loading-the-data",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Loading the Data",
+    "text": "Loading the Data\nFirst, I will load the dataset and display the first six rows.\n\nlibrary(palmerpenguins)\n\nhead(penguins)\n\n  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n1  Adelie Torgersen           39.1          18.7               181        3750\n2  Adelie Torgersen           39.5          17.4               186        3800\n3  Adelie Torgersen           40.3          18.0               195        3250\n4  Adelie Torgersen             NA            NA                NA          NA\n5  Adelie Torgersen           36.7          19.3               193        3450\n6  Adelie Torgersen           39.3          20.6               190        3650\n     sex year\n1   male 2007\n2 female 2007\n3 female 2007\n4   &lt;NA&gt; 2007\n5 female 2007\n6   male 2007\n\n\nData source: Palmer Penguins, Palmer Station Antarctica LTER."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#comparing-species",
+    "href": "posts/r-analysis/index.html#comparing-species",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Comparing Species",
+    "text": "Comparing Species\nNext, I will calculate the average body mass for each species.\n\naverage_mass &lt;- aggregate(\n  body_mass_g ~ species,\n  data = penguins,\n  FUN = mean\n)\n\naverage_mass\n\n    species body_mass_g\n1    Adelie    3700.662\n2 Chinstrap    3733.088\n3    Gentoo    5076.016"
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#visualization",
+    "href": "posts/r-analysis/index.html#visualization",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Visualization",
+    "text": "Visualization\nI will create a bar chart to compare the average body mass of the three penguin species.\n\nbarplot(\n  average_mass$body_mass_g,\n  names.arg = average_mass$species,\n  ylab = \"Average Body Mass (g)\",\n  xlab = \"Species\"\n)\n\n\n\n\n\n\n\nFigure 1: Average body mass by penguin species."
+  },
+  {
+    "objectID": "posts/r-analysis/index.html#conclusion",
+    "href": "posts/r-analysis/index.html#conclusion",
+    "title": "Exploring the Palmer Penguins Dataset with R",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe results show that Gentoo penguins have the highest average body mass among the three species. This analysis demonstrates how R can be used to summarize and visualize data."
   }
 ]

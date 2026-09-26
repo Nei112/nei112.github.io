@@ -1,0 +1,73 @@
+
+---
+title: "Exploring the Palmer Penguins Dataset with R"
+author: "Nanxuan Li"
+date: "2026-09-26"
+format: html
+execute:
+  echo: true
+---
+
+
+
+## Introduction
+
+In this post, I will explore the Palmer Penguins dataset using R. I will compare the average body mass of different penguin species and create a simple bar chart.
+
+My goal is to learn how to summarize and visualize data using R.
+
+
+
+## Loading the Data
+
+First, I will load the dataset and display the first six rows.
+
+```{r}
+#| warning: false
+
+library(palmerpenguins)
+
+head(penguins)
+```
+
+Data source: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Palmer Station Antarctica LTER.
+
+
+
+## Comparing Species
+
+Next, I will calculate the average body mass for each species.
+
+```{r}
+average_mass <- aggregate(
+  body_mass_g ~ species,
+  data = penguins,
+  FUN = mean
+)
+
+average_mass
+```
+
+
+
+## Visualization
+
+I will create a bar chart to compare the average body mass of the three penguin species.
+
+```{r}
+#| label: fig-r-penguin-mass
+#| fig-cap: "Average body mass by penguin species."
+
+barplot(
+  average_mass$body_mass_g,
+  names.arg = average_mass$species,
+  ylab = "Average Body Mass (g)",
+  xlab = "Species"
+)
+```
+
+
+
+## Conclusion
+
+The results show that Gentoo penguins have the highest average body mass among the three species. This analysis demonstrates how R can be used to summarize and visualize data.
