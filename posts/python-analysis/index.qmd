@@ -1,0 +1,70 @@
+---
+title: "Exploring the Palmer Penguins Dataset with Python"
+author: "Nanxuan Li"
+date: "2026-09-26"
+format: html
+jupyter: python3
+execute:
+  echo: true
+---
+
+## Introduction
+
+In this post, I will explore the Palmer Penguins dataset using Python. I will use pandas to examine the data, compare different penguin species, and create visualizations with matplotlib.
+
+My goal is to understand how average body mass differs across penguin species.
+
+
+
+## Loading the Data
+
+I will first load the Palmer Penguins dataset and look at the first five rows.
+
+```{python}
+#| warning: false
+
+from palmerpenguins import load_penguins
+import matplotlib.pyplot as plt
+
+penguins = load_penguins()
+penguins.head()
+```
+
+Data source: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Palmer Station Antarctica LTER.
+
+
+
+
+## Comparing Species
+
+I will calculate the average body mass for each penguin species.
+
+```{python}
+average_mass = penguins.groupby("species")["body_mass_g"].mean()
+average_mass
+```
+
+
+
+
+## Visualization
+
+I will use a bar chart to compare the average body mass of each species.
+
+```{python}
+#| label: fig-penguin-mass
+#| fig-cap: "Average body mass by penguin species."
+
+average_mass.plot(kind="bar")
+plt.ylabel("Average Body Mass (g)")
+plt.xlabel("Species")
+plt.tight_layout()
+plt.show()
+```
+
+
+
+## Conclusion
+
+The chart shows that Gentoo penguins have the highest average body mass among the three species. This simple analysis demonstrates how Python can be used to summarize and visualize data.
+

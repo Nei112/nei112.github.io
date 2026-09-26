@@ -47,5 +47,47 @@
     "title": "Nanxuan Li",
     "section": "",
     "text": "Hi, I’m Nanxuan Li. I completed my undergraduate studies in Statistics and Economics at the University of Toronto. Before joining the MDS program, I developed an interest in using data to understand and solve real-world problems. Through the MDS program, I hope to improve my data analysis and programming skills.\nI have also been enjoying my time in Vancouver. The weather and scenery here are great, and the city is a nice place for outdoor activities. I especially enjoy skiing, so I hope I will have a chance to go skiing here this winter."
+  },
+  {
+    "objectID": "posts/python-analysis/index.html",
+    "href": "posts/python-analysis/index.html",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "",
+    "text": "In this post, I will explore the Palmer Penguins dataset using Python. I will use pandas to examine the data, compare different penguin species, and create visualizations with matplotlib.\nMy goal is to understand how average body mass differs across penguin species."
+  },
+  {
+    "objectID": "posts/python-analysis/index.html#introduction",
+    "href": "posts/python-analysis/index.html#introduction",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "",
+    "text": "In this post, I will explore the Palmer Penguins dataset using Python. I will use pandas to examine the data, compare different penguin species, and create visualizations with matplotlib.\nMy goal is to understand how average body mass differs across penguin species."
+  },
+  {
+    "objectID": "posts/python-analysis/index.html#loading-the-data",
+    "href": "posts/python-analysis/index.html#loading-the-data",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "Loading the Data",
+    "text": "Loading the Data\nI will first load the Palmer Penguins dataset and look at the first five rows.\n\nfrom palmerpenguins import load_penguins\nimport matplotlib.pyplot as plt\n\npenguins = load_penguins()\npenguins.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n\n\n\n\n\n\n\nData source: Palmer Penguins, Palmer Station Antarctica LTER."
+  },
+  {
+    "objectID": "posts/python-analysis/index.html#comparing-species",
+    "href": "posts/python-analysis/index.html#comparing-species",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "Comparing Species",
+    "text": "Comparing Species\nI will calculate the average body mass for each penguin species.\n\naverage_mass = penguins.groupby(\"species\")[\"body_mass_g\"].mean()\naverage_mass\n\nspecies\nAdelie       3700.662252\nChinstrap    3733.088235\nGentoo       5076.016260\nName: body_mass_g, dtype: float64"
+  },
+  {
+    "objectID": "posts/python-analysis/index.html#visualization",
+    "href": "posts/python-analysis/index.html#visualization",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "Visualization",
+    "text": "Visualization\nI will use a bar chart to compare the average body mass of each species.\n\naverage_mass.plot(kind=\"bar\")\nplt.ylabel(\"Average Body Mass (g)\")\nplt.xlabel(\"Species\")\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Average body mass by penguin species."
+  },
+  {
+    "objectID": "posts/python-analysis/index.html#conclusion",
+    "href": "posts/python-analysis/index.html#conclusion",
+    "title": "Exploring the Palmer Penguins Dataset with Python",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe chart shows that Gentoo penguins have the highest average body mass among the three species. This simple analysis demonstrates how Python can be used to summarize and visualize data."
   }
 ]
